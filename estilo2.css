@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace; /* Tipografia estilo código */
+}
+
+body {
+    background-color: #0f172a; /* Azul escuro quase preto */
+    color: #cbd5e1;
+    line-height: 1.7;
+    padding: 1rem;
+}
+
+/* Cabeçalho centralizado e futurista */
+.main-header {
+    background-color: #1e293b;
+    border: 2px solid #00f2fe; /* Borda neon */
+    border-radius: 16px;
+    padding: 1.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.logo h1 {
+    color: #ffffff;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+.logo h1 span {
+    color: #00f2fe;
+    text-shadow: 0 0 10px #00f2fe;
+}
+
+.main-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.nav-link {
+    color: #94a3b8;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.6rem 1.2rem;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #00f2fe;
+    border-color: #00f2fe;
+    background-color: rgba(0, 242, 254, 0.1);
+}
+
+/* Estilo do botão ativo no modo dark */
+.nav-link.active {
+    background-color: #4f46e5; /* Roxo/Indigo */
+    color: #ffffff;
+    box-shadow: 0 0 15px rgba(79, 70, 229, 0.6);
+}
+
+/* Conteúdo em bloco único empilhado */
+.content-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.hero-section {
+    background: linear-gradient(135deg, #1e1b4b, #1e293b);
+    padding: 3rem 2rem;
+    border-radius: 16px;
+    text-align: center;
+    margin-bottom: 2rem;
+    border: 1px solid #4f46e5;
+}
+
+.hero-section h2 {
+    color: #ffffff;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Transforma o Grid em uma coluna única (empilhada) */
+.layout-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.main-article {
+    background-color: #1e293b;
+    padding: 2rem;
+    border-radius: 16px;
+    border-bottom: 4px solid #4f46e5;
+}
+
+.main-article h3 {
+    color: #00f2fe;
+    margin-bottom: 1rem;
+}
+
+/* Barra lateral transformada em um card de destaque inferior */
+.sidebar {
+    background-color: #312e81; /* Fundo roxo escuro */
+    padding: 2rem;
+    border-radius: 16px;
+    color: #ffffff;
+}
+
+.sidebar h3 {
+    color: #00f2fe;
+    margin-bottom: 0.5rem;
+}
+
+.status-box {
+    color: #e2e8f0;
+    font-style: italic;
+}
+
+/* Rodapé */
+.main-footer {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+    border-top: 1px solid #334155;
+    color: #64748b;
+}
+
