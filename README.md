@@ -2,7 +2,7 @@
 
 Projeto desenvolvido em grupo durante o primeiro semestre da disciplina de Introdução à Computação, como parte de um curso EAD sobre HTML, CSS e Bootstrap.
 
-##Objetivo
+## Objetivo
 
 Demonstrar diferentes possibilidades de estilização utilizando CSS externo em páginas com a mesma estrutura HTML.
 
@@ -23,7 +23,7 @@ O projeto possui 4 páginas HTML com conteúdo e estrutura semelhantes, alterand
 
 O projeto foi publicado utilizando GitHub Pages para visualização online.
 
-🔗 [Acessar projeto](COLOCA_O_LINK_AQUI)
+🔗 Link: https://robertaconcolatto.github.io/DemonstracaoDeEstilosCSS/
 
 ## Observações
 
