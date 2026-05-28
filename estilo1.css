@@ -1,4 +1,6 @@
-/* Reset básico */
+/* ==========================================================================
+   1. RESET & CONFIGURAÇÕES GERAIS
+   ========================================================================== */
 * {
     margin: 0;
     padding: 0;
@@ -10,9 +12,16 @@ body {
     background-color: #f4f6f9;
     color: #333333;
     line-height: 1.6;
+    
+    /* Configuração para fixar o footer na base da tela */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-/* Cabeçalho Responsivo com Flex Wrap */
+/* ==========================================================================
+   2. CABEÇALHO & NAVEGAÇÃO
+   ========================================================================== */
 .main-header {
     background-color: #1a365d;
     color: #ffffff;
@@ -21,7 +30,7 @@ body {
     align-items: center;
     padding: 1rem 5%;
     border-bottom: 4px solid #2b6cb0;
-    flex-wrap: wrap; /* Permite quebrar linha em telas muito pequenas */
+    flex-wrap: wrap; /* Permite quebrar linha em telas pequenas (mobile) */
     gap: 1rem;
 }
 
@@ -51,18 +60,26 @@ body {
     color: #ffffff;
 }
 
+/* Destaque para a página atual no menu */
 .nav-link.active {
     background-color: #4299e1;
     color: #ffffff;
 }
 
-/* Conteúdo Principal */
+/* ==========================================================================
+   3. CONTEÚDO PRINCIPAL (LAYOUT)
+   ========================================================================== */
 .content-container {
     max-width: 1200px;
+    width: 100%;
     margin: 2rem auto;
     padding: 0 1rem;
+    
+    /* Faz o container esticar verticalmente e empurrar o footer para baixo */
+    flex: 1; 
 }
 
+/* Seção Hero (Banner de Destaque) */
 .hero-section {
     background-color: #ffffff;
     padding: 2rem;
@@ -75,13 +92,13 @@ body {
 .hero-section h2 {
     color: #1a365d;
     margin-bottom: 1rem;
-    font-size: 1.5rem; /* Fonte menor para mobile por padrão */
+    font-size: 1.5rem; /* Tamanho inicial para mobile */
 }
 
-/* Grid Responsivo (Mobile-First / Adaptativo) */
+/* Grid do Conteúdo (Padrão Mobile: 1 coluna) */
 .layout-grid {
     display: grid;
-    grid-template-columns: 1fr; /* 1 coluna no mobile */
+    grid-template-columns: 1fr; 
     gap: 2rem;
 }
 
@@ -101,6 +118,7 @@ body {
     margin-bottom: 1rem;
 }
 
+/* Barra Lateral */
 .sidebar {
     background-color: #edf2f7;
     padding: 1.5rem;
@@ -121,24 +139,40 @@ body {
     font-size: 0.9rem;
 }
 
+/* ==========================================================================
+   4. RODAPÉ (FOOTER)
+   ========================================================================== */
 .main-footer {
     text-align: center;
     padding: 2rem;
-    margin-top: 4rem;
     background-color: #1a365d;
     color: #a0aec0;
     font-size: 0.9rem;
+    width: 100%;
 }
 
-/* MEDIA QUERY: Telas maiores que Tablet (Desktop) */
+/* ==========================================================================
+   5. MEDIA QUERIES (ADAPTAÇÃO PARA DESKTOP)
+   ========================================================================== */
 @media (min-width: 768px) {
     .hero-section h2 {
-        font-size: 2rem; /* Aumenta o título no desktop */
+        font-size: 2rem; /* Aumenta o título em telas maiores */
     }
+    
     .layout-grid {
-        grid-template-columns: 2fr 1fr; /* Retorna para duas colunas lado a lado */
+        /* Ativa o layout lado a lado (2 colunas) apenas em telas grandes */
+        grid-template-columns: 2fr 1fr; 
     }
+    
     .main-header {
         padding: 1rem 5%;
+    }
+    
+    .main-article {
+        padding: 2rem;
+    }
+    
+    .sidebar {
+        padding: 2rem;
     }
 }
